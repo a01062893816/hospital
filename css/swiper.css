@@ -1,0 +1,53 @@
+/* Swiper */
+.slide {
+  width: 100%;
+  overflow: hidden;
+}
+.slide .swiper img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 메인슬라이드 좌우 버튼 */
+.main-slide .swiper-prev,
+.main-slide .swiper-next {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.main-slide .swiper-prev {
+  left: 0;
+  color: #333;
+}
+.main-slide .swiper-next {
+  right: 0;
+  color: #333;
+}
+
+/* pagination */
+.main-slide .swiper-pagination .swiper-pagination-bullet {
+  background: #000000;
+   width: 16px;
+  height: 16px;
+}
+.main-slide .swiper-pagination .swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 0.5);
+   width: 16px;
+  height: 16px;
+}
+
+
+
+/* 의사사진 슬라이드 */
+
+
+
