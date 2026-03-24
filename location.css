@@ -1,0 +1,816 @@
+@charset "utf-8";
+/* 변수선언하기 */
+:root {
+   --primary-color: #333; /*기본글자색*/
+  --bg-color: #dfdfdf; /*연한회색*/
+  --mo-main-bg: #ff6f61; /*모바일메뉴배경색*/
+  --mo-sub-bg: #273057; /*모바일서브배경*/
+  --button-bg: #4ea390; /*자세히보기 버튼색*/
+  --transition: all 0.6s ease-in-out;
+  --font-family: "Poppins", sans-serif;
+  --line-height: 1.4;
+  --font-weight: 400;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  color: rgb(3, 3, 3);
+  box-sizing: border-box;
+}
+img{display: block;}
+a{text-decoration: none;}
+li{list-style: none;}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+
+
+/* ----------------------------------------------------- */
+/* sub_1-1디자인부분---------------------------------------- */
+
+/* 공통 이미지/텍스트 부분------------ */
+
+.main-Picture{
+  width: 100%;
+  max-width: 100%;
+  height: 280px;
+  background: url(../img/sub1_bg.jpg)no-repeat;
+    background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+.main-Picture> div{
+  position: absolute;
+  top: 100px; left: 20px;
+  line-height: 1.5;
+  
+}
+.main-Picture h2{
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 0 10px 10px rgba(0, 0, 0, 1) !important;
+
+}
+.main-Picture p{
+  color: #fff;
+  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* 메인 버튼 부분 */
+.main-button{
+  width: 100%;
+  height: 100px;
+}
+.main-button .main-button-list{
+    display: flex;
+    justify-content: center;
+    width: 380px;
+    margin: auto;
+    padding-top: 50px;
+    
+}
+.main-button .main-button-list li{
+  width: 110px;
+  height: 40px;
+  border: 1px solid #2d2d2d;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+}
+.main-button .main-button-list li a{
+  text-align: center !important;
+}
+
+.main-button .main-button-list li:last-child{
+     background-color: #3f3f3f;
+}
+.main-button .main-button-list li:last-child a{
+  color: #fff;
+}
+
+.main-button .main-button-list li:hover:nth-child(1),
+.main-button .main-button-list li:hover:nth-child(2){
+   background-color: #3f3f3f;
+}
+.main-button .main-button-list li:hover:nth-child(1) a,
+.main-button .main-button-list li:hover:nth-child(2) a{
+  color: #fff;
+   animation: blink 0.6s 1;
+
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 여기까지가 sub-1 공통 디자인 부분 */
+
+
+
+/* 여기부터 sub-1-2 디자인 시작 */
+
+/* 메인 글씨 */
+.main-text{
+  width: 90%;
+  margin: auto;
+  padding-top: 80px;
+}
+.main-text-d{
+  position: relative;
+}
+.main-text-d h3{
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+
+/* 선 */
+.main-text-d h3::after{
+  content: "";
+  height: 1px;
+  width: 40px;
+  background-color: #000000;
+  position: absolute;
+  top: 29px; left: 0;
+}
+.main-text-d> p{
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.5;
+  padding-bottom: 55px;
+}
+
+
+/* 주소/진료시간/전화상담 /지도 */
+
+.navi{
+  width: 90%;
+  margin: auto;
+}
+
+.add, .time, .tel {
+  width: 100% !important;
+  text-align: center;
+}
+
+.add{
+  width: 100%;
+}
+.text1{
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #e7e7e7;
+}
+.text1> h4{
+  font-weight: bold;
+  color: #474747;
+}
+
+
+
+.text2{
+  padding: 30px 0;
+  line-height: 1.5;
+}
+.text2> p{
+  color: #474747;
+  text-align: left;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 공통 영역-------------------------------------------- */
+
+/* ----------------------------------------------------- */
+
+/*모바일 영역-------------------------------- */
+
+header{
+  width: 100%;
+  height: 80px;
+  position: sticky;
+  top: -10px;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px); /*배경투명효과*/
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+header h1{
+  
+  height: 80px;
+  line-height: 50px;
+}
+header> h1> a{
+  font-size: 21px;
+  font-family: "Playfair Display", serif;
+   transition: all 0.3s;
+}
+header> h1> a:hover{
+  color: var(--button-bg);
+}
+
+/* pc메뉴 */
+#pc_menu{
+  display: none;
+}
+
+
+ /* 모바일 메뉴 */
+ #mo_menu{
+  position: fixed;
+  top: 0px;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+
+ }
+
+ #mo_menu .mo_menu_list{
+  position: relative;
+  top: 30px;
+  left: 20px;
+  width: 200px;
+  height: 250px;
+  line-height: 40px;
+ }
+ .blod-t{
+  background-color: #fff;
+  font-weight: bold;
+ }
+ #mo_menu .mo_menu_list> li{}
+ #mo_menu .mo_menu_list> li> a{}
+ #mo_menu .mo_menu_list> li:hover> a{
+  color: #4ea390;
+ }
+
+
+
+/* 모바일 헤더 국기 */
+ .pc_icon{display: none;}
+ .mo_icon{
+  width: 20%;
+  top: 0px; right: 160px;
+  z-index: 10;
+  padding-bottom: 20px;
+
+ }
+ header .mo_icon .mo_icon-list{
+  display: flex;
+ }
+ header .mo_icon .mo_icon-list> li{}
+ header .mo_icon .mo_icon-list> li> a{
+  width: 22px;
+  display: block;
+ }
+ header .mo_icon .mo_icon-list> li> a> img{
+  width: 100%;
+ }
+
+
+/* 햄버거버튼 */
+.menu-toggle-btn {
+
+  width: 33px;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 11;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.menu-toggle-btn:hover{
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  /* background-color: rgba(24, 255, 167, 0.2); */
+}
+
+.menu-toggle-btn .toggle {
+  width: 33px;
+  height: 3px;
+  border-radius: 2px;
+  background: #2d2d2d;
+  margin: 5px 0;
+}
+
+/* nav js */
+#mo_menu.show {
+  right: 0;
+}
+
+/* Toggle btn js */
+.menu-toggle-btn.active {
+  right: 30px;   /* X표위치 이동  원래는 320해서 밖에있었음 */
+  transition: var(--transition);
+}
+.menu-toggle-btn.active #one {
+  transform: translateY(7px) rotate(-135deg);
+}
+.menu-toggle-btn.active #two {
+  opacity: 0;
+}
+.menu-toggle-btn.active #three {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+
+/* 뱃지영역 */
+
+.badges{
+   position: fixed;
+  top: 165px;
+  right: 0%;
+  z-index: 100;
+  width:55px;
+  height: 311px;
+  background-color: #6e6e6e;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.badges div a{
+  width: 100%;
+  display: block;
+  /* border-bottom: 1px solid #cacaca ; */
+  margin: auto;
+  padding-top: 15px;
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 15%;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.badges div a::after{
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #9e9e9e;
+  left: 0; right: 0; margin: auto; top: 65px;
+  width: 45px;
+}
+/* 마지막선 없애기 */
+.badges > div:last-child a::after{
+   display: none;
+}
+
+
+.badges div a img{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5px;
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);   그림자효과*/
+}
+
+.badges div a:hover img{
+  opacity: 0.5;
+}
+
+/* 위로 올라오는 화살표 */
+#to-top{
+  width: 100%;
+  /* border-bottom: 1px solid #cacaca ; */
+  margin: auto;
+  padding-top: 10px;
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 15%;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+#to-top img{
+  width: 40%;
+  margin: auto;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+#to-top img:hover{
+  opacity: 0.5;
+}
+
+
+
+/* 헤더부분끝------------------------------------------------------ */
+
+
+
+
+/* 푸터영역------------- */
+footer{
+  margin-top: 80px;
+  width: 100%;
+  height: 300px;
+  background-color: #f7f4f4;
+
+  padding-top: 50px;
+}
+.footer-wrap{
+  width: 90%;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+}
+footer strong{
+  color: #4ea390;
+  font-weight: bold;
+}
+.footer-head-t{
+  font-weight: bold;
+}
+.add{
+  width: 36%;
+}
+.add .add_box{
+  width: 90%;
+  padding-top: 20px;
+  font-size: 13px;
+ }
+ .add .add_box> p{
+  color: #636363;
+  line-height: 1.5;
+ }
+
+
+.call{
+    width: 36%;
+}
+.call .call_box{
+  width: 90%;
+  padding-top: 20px;
+  font-size: 13px;
+}
+.call .call_box> p{
+  color: #636363;
+  line-height: 1.5;
+}
+
+
+.sns{
+    width: 28%;
+}
+.sns .sns_box{
+  width: 80%;
+  max-width: 200px;
+  padding-top: 40px;
+  display: flex;
+}
+.sns .sns_box> li{
+  width: 100%;
+  padding-left: 11px;
+}
+.sns .sns_box> li> a{
+  width:25px;
+  display: block;
+}
+.sns .sns_box> li> a> img{
+  width: 100%;
+}
+
+
+.footer-copy{
+  text-align: center;
+  padding-top: 50px;
+  color: #636363;
+  font-size: 11px;
+   letter-spacing: 1px;
+
+}
+
+/* 푸터 부분끝------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* 테블릿 영역-------------------------------- */
+@media all and (min-width: 768px){
+  body{
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  /* 태블릿 영역은 sub-1공통 영역부분 */
+
+
+  /* 메인 버튼 부분 */
+  .main-button{
+      width: 95%;
+  margin: auto;
+  }
+  .main-button .main-button-list{
+   margin: 0;
+   justify-content: flex-start;
+   width: 350px;
+  }
+/*---------------sub-1공통부분끝--------------------- */
+
+
+
+/* 여기부터 sub-1-2 디자인 시작 ------------------*/
+
+/* 메인 글씨부분 */
+.main-text{
+  width: 95%;
+}
+.main-text-d h3{
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+/* 선 */
+.main-text-d h3::after{
+  top: 37px; left: 0;
+}
+
+.main-text-d> p{
+  font-size: 16px;
+  width: 490px;
+}
+
+
+/* 주소 */
+.navi{
+  width: 95%;
+
+}
+.add, .time, .tel{
+  display: flex;
+  border-bottom: 1px solid #d6d6d6;
+
+
+}
+.add{
+  border-top: 1px solid #333;
+  margin-top: 20px;
+}
+
+.text1{
+  width: 30%;
+  max-width: 400px;
+  
+}
+
+.text1> h4{
+  margin-top: 30px;
+}
+
+.tel-text1> h4{
+  margin-top: 10px;
+}
+
+.text2> p{
+ color: #888888;
+}
+
+.nav{
+  width: 100%;
+}
+.nav iframe{
+  width: 100%;
+  max-width: 100%;
+}
+
+}/* 태블릿 END----------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PC 영역----------------------------------------------------- */
+@media all and (min-width:1200px){
+  body{background-color: #ffffff;}
+
+
+   #mo_menu{
+    display: none;
+    
+   }
+   .mo_icon{
+    display: none;
+   }
+
+   .menu-toggle-btn{
+    display: none;
+   }
+
+   #pc_menu{
+  display: block;
+}
+
+
+header{
+  padding-top: 0;
+  
+}
+header h1{
+  width: 20%;
+  padding-left: 20px;
+  margin-top: 25px;
+}
+
+/* pc메뉴 */
+/* 1차메뉴 */
+.pc-menu-wrap{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+
+#pc_menu{
+  width: 100%;
+  margin-right: 80px; /* ← 이걸로 국기랑 거리 조절 */
+}
+header #pc_menu .pc_menu-list{
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+header #pc_menu .pc_menu-list> li{
+  width: 160px;
+  height: 80px;
+  line-height: 70px;
+text-align: center;
+}
+header #pc_menu .pc_menu-list> li> a{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+header #pc_menu .pc_menu-list> li:hover> a{
+  color: #4ea390;
+}
+
+
+.pc_icon{
+  display: block;
+  position: relative;
+  right: 60px;
+  top: 26px;
+  z-index: 50;
+  background-color: #fff;
+    width: 90px;
+    height: 20px;
+
+  padding-bottom: 20px;
+
+}
+ header .pc_icon .pc_icon-list{
+  display: flex;
+ }
+ header .pc_icon .pc_icon-list> li{}
+ header .pc_icon .pc_icon-list> li> a{
+  width: 22px;
+  display: block;
+ }
+ header .pc_icon .pc_icon-list> li> a> img{
+  width: 100%;
+ }
+
+
+/* 2차메뉴 */
+#pc_menu .pc_menu-list li> .pc_sub{
+  display: none;
+  text-align: center;
+  width: 140px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3) 
+}
+#pc_menu .pc_menu-list li> .pc_sub> li{
+ background-color: #fff;
+ text-align: center;
+ height: 55px;
+ 
+
+}
+#pc_menu .pc_menu-list li> .pc_sub> li> a{
+  text-align: center !important;
+  color: #636363;
+  font-size: 14px;
+  
+}
+
+#pc_menu .pc_menu-list li .pc_sub li:hover{
+  background-color: #333131;
+}
+#pc_menu .pc_menu-list li .pc_sub li:hover a{
+  color: #fff;
+}
+
+
+/* 푸터부분 */
+footer{
+  position: relative;
+}
+.footer-copy{
+ position: absolute;
+font-size: 13px;
+top: 210px; left: 0; right: 0; margin: auto;
+
+}
+
+/* -----------------공통메뉴----------- */
+/* -----------------공통메뉴----------- */
+
+
+
+/* sub-1 pc 디자인 부분---------------- */
+
+/* 메인 버튼 부분 */
+ .main-button .main-button-list{
+  width: 400px;
+ }
+.main-button .main-button-list li{
+  width: 130px;
+  height: 55px;
+  line-height: 55px;
+}
+
+/* 의료진 소개 */
+.people-text h3{
+  font-size: 36px;
+}
+
+/* 선 */
+.people-text h3::after{
+  width: 44px;
+    top: 44px; left: 0;
+}
+.people-text> p{
+  width: 490px;
+}
+
+/* sub-1 공통부분 끝-------------------- */
+
+/* 지도 */
+.navi {
+  width: 90%;
+  margin: 0;        /* 또는 margin: 0 auto → 제거 */
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+}/* PC END */

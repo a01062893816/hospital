@@ -24,7 +24,8 @@ a{text-decoration: none;}
 li{list-style: none;}
 
 body {
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -705,6 +706,7 @@ top: -100px;  right: 30px;
 
 .Communication_navi{
   width: 50%;
+  overflow: hidden;
   /* padding-top: 100px; */
 }
 
